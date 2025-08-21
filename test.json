@@ -1,0 +1,122 @@
+{
+    "messages": [
+        {
+            "id": [
+                "langchain",
+                "schema",
+                "messages",
+                "HumanMessage"
+            ],
+            "kwargs": {
+                "content": "What is IBMs stock price?",
+                "id": "244db6fd-a08e-4015-87c7-20af2c89e479",
+                "type": "human"
+            },
+            "lc": 1,
+            "type": "constructor"
+        },
+        {
+            "id": [
+                "langchain",
+                "schema",
+                "messages",
+                "AIMessage"
+            ],
+            "kwargs": {
+                "additional_kwargs": {
+                    "tool_calls": [
+                        {
+                            "function": {
+                                "arguments": "{\"stock_ticker\": \"IBM\"}",
+                                "name": "prices"
+                            },
+                            "id": "chatcmpl-tool-e35a5794dd0f401695854f38f6d832ae",
+                            "type": "function"
+                        }
+                    ]
+                },
+                "content": "",
+                "id": "chatcmpl-04e5c5b5-324b-47be-bfd3-f26e53654eb3---217b2114de1d4fe1edd4ad4be3525f1c---8169e7ff-2b9a-4196-80f1-ec898475fc3d",
+                "invalid_tool_calls": [],
+                "response_metadata": {
+                    "finish_reason": "tool_calls",
+                    "model_name": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+                    "system_fingerprint": "",
+                    "token_usage": {
+                        "completion_tokens": 18,
+                        "prompt_tokens": 377,
+                        "total_tokens": 395
+                    }
+                },
+                "tool_calls": [
+                    {
+                        "args": {
+                            "stock_ticker": "IBM"
+                        },
+                        "id": "chatcmpl-tool-e35a5794dd0f401695854f38f6d832ae",
+                        "name": "prices",
+                        "type": "tool_call"
+                    }
+                ],
+                "type": "ai",
+                "usage_metadata": {
+                    "input_tokens": 377,
+                    "output_tokens": 18,
+                    "total_tokens": 395
+                }
+            },
+            "lc": 1,
+            "type": "constructor"
+        },
+        {
+            "id": [
+                "langchain",
+                "schema",
+                "messages",
+                "ToolMessage"
+            ],
+            "kwargs": {
+                "content": "241.27999877929688",
+                "id": "c7ac58df-df5f-4e24-9fea-e09627c0f43a",
+                "name": "prices",
+                "status": "success",
+                "tool_call_id": "chatcmpl-tool-e35a5794dd0f401695854f38f6d832ae",
+                "type": "tool"
+            },
+            "lc": 1,
+            "type": "constructor"
+        },
+        {
+            "id": [
+                "langchain",
+                "schema",
+                "messages",
+                "AIMessage"
+            ],
+            "kwargs": {
+                "content": "IBM's stock price is $241.28.",
+                "id": "chatcmpl-4d7bded1-c8e0-429f-bf71-c57db6197102---8444c5dd5c98995a3c7872eef34b045e---d99899ff-79ac-48f1-b560-1be3383b9e2e",
+                "invalid_tool_calls": [],
+                "response_metadata": {
+                    "finish_reason": "stop",
+                    "model_name": "meta-llama/llama-4-maverick-17b-128e-instruct-fp8",
+                    "system_fingerprint": "",
+                    "token_usage": {
+                        "completion_tokens": 11,
+                        "prompt_tokens": 416,
+                        "total_tokens": 427
+                    }
+                },
+                "tool_calls": [],
+                "type": "ai",
+                "usage_metadata": {
+                    "input_tokens": 416,
+                    "output_tokens": 11,
+                    "total_tokens": 427
+                }
+            },
+            "lc": 1,
+            "type": "constructor"
+        }
+    ]
+}

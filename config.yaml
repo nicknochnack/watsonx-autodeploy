@@ -1,0 +1,12 @@
+name: python311
+channels:
+  - empty
+dependencies:
+  - pip:
+      - ibm-watsonx-ai==1.3.34
+      - langchain==0.3.27
+      - langchain-ibm==0.3.15
+      - langgraph==0.2.44
+      - python-dotenv==1.1.1
+      - yfinance==0.2.65
+prefix: /opt/anaconda3/envs/python311
